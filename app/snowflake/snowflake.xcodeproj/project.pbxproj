@@ -14,6 +14,8 @@
 		E012F0B7216AA68900D3D2ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E012F0B5216AA68900D3D2ED /* LaunchScreen.storyboard */; };
 		E012F0BA216AA68900D3D2ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E012F0B9216AA68900D3D2ED /* main.m */; };
 		E012F0C1216AA90100D3D2ED /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E012F0C0216AA90100D3D2ED /* index.html */; };
+		E012F0C3216AA9C300D3D2ED /* www in Resources */ = {isa = PBXBuildFile; fileRef = E012F0C2216AA9C300D3D2ED /* www */; };
+		E012F0C6216AAA2400D3D2ED /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E012F0C5216AAA2400D3D2ED /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E012F0B8216AA68900D3D2ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E012F0B9216AA68900D3D2ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E012F0C0216AA90100D3D2ED /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../../../index.html; sourceTree = "<group>"; };
+		E012F0C2216AA9C300D3D2ED /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../../www; sourceTree = "<group>"; };
+		E012F0C5216AAA2400D3D2ED /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E012F0C6216AAA2400D3D2ED /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,7 @@
 			children = (
 				E012F0A9216AA68800D3D2ED /* snowflake */,
 				E012F0A8216AA68800D3D2ED /* Products */,
+				E012F0C4216AAA2300D3D2ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +66,7 @@
 		E012F0A9216AA68800D3D2ED /* snowflake */ = {
 			isa = PBXGroup;
 			children = (
+				E012F0C2216AA9C300D3D2ED /* www */,
 				E012F0C0216AA90100D3D2ED /* index.html */,
 				E012F0AA216AA68800D3D2ED /* AppDelegate.h */,
 				E012F0AB216AA68800D3D2ED /* AppDelegate.m */,
@@ -72,6 +79,14 @@
 				E012F0B9216AA68900D3D2ED /* main.m */,
 			);
 			path = snowflake;
+			sourceTree = "<group>";
+		};
+		E012F0C4216AAA2300D3D2ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E012F0C5216AAA2400D3D2ED /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +149,7 @@
 				E012F0B7216AA68900D3D2ED /* LaunchScreen.storyboard in Resources */,
 				E012F0C1216AA90100D3D2ED /* index.html in Resources */,
 				E012F0B4216AA68900D3D2ED /* Assets.xcassets in Resources */,
+				E012F0C3216AA9C300D3D2ED /* www in Resources */,
 				E012F0B2216AA68800D3D2ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +306,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V32WGJJN6U;
 				INFOPLIST_FILE = snowflake/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V32WGJJN6U;
 				INFOPLIST_FILE = snowflake/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

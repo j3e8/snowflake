@@ -4,6 +4,11 @@ angular.module('app').service('SnowflakeApp', function() {
     this.color = color;
   }
 
+  var showCursors = true;
+  if (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) {
+    showCursors = false;
+  }
+
   return function MainApp(htmlCanvasElement, sides, color) {
     var activeColor = color;
     var canvasElement = htmlCanvasElement;
@@ -90,17 +95,19 @@ angular.module('app').service('SnowflakeApp', function() {
       }
 
       // render cursors
-      for (var i=0; i<360; i+=degree_interval) {
-        if (i == 0)
-          ctx.fillStyle = "rgba(255, 242, 220, 0.9)";
-        else
-          ctx.fillStyle = "rgba(255, 242, 220, 0.4)";
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
-        ctx.beginPath();
-        ctx.translate(width/2, height/2);
-        ctx.rotate(i*Math.PI/180);
-        ctx.arc(mouseLocation.x, mouseLocation.y, 3, 0, 2*Math.PI);
-        ctx.fill();
+      if (showCursors) {
+        for (var i=0; i<360; i+=degree_interval) {
+          if (i == 0)
+            ctx.fillStyle = "rgba(255, 242, 220, 0.9)";
+          else
+            ctx.fillStyle = "rgba(255, 242, 220, 0.4)";
+          ctx.setTransform(1, 0, 0, 1, 0, 0);
+          ctx.beginPath();
+          ctx.translate(width/2, height/2);
+          ctx.rotate(i*Math.PI/180);
+          ctx.arc(mouseLocation.x, mouseLocation.y, 3, 0, 2*Math.PI);
+          ctx.fill();
+        }
       }
 
       _requestAnimationFrame(updateCanvas);
