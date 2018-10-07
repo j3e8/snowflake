@@ -29,8 +29,8 @@ angular.module('app').service('SnowflakeApp', function() {
       ctx.fillStyle = "#000000";
       ctx.fillRect(0, 0, width, height);
 
-      var mainGuideHeight = height/1.2;
-      var otherGuideHeight = height/2;
+      var mainGuideHeight = Math.min(width/1.1, height/1.1);
+      var otherGuideHeight = Math.min(width/2, height/2);
 
       // main guides
       ctx.lineWidth = 1;
