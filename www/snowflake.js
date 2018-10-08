@@ -44,7 +44,7 @@ angular.module('app').controller('mainController', function($scope, SnowflakeApp
 
   $scope.mousemove = function(event) {
     if (mainApp)
-      mainApp.mousemove({x:event.pageX, y:event.pageY});
+      mainApp.mousemove({x:event.pageX, y:event.pageY}, event.force || event.webkitForce);
     event.preventDefault();
   }
   $scope.mouseup = function(event) {
@@ -87,8 +87,6 @@ angular.module('app').controller('mainController', function($scope, SnowflakeApp
     var c = document.getElementById('mainCanvas');
     c.width = document.getElementById('container').offsetWidth;
     c.height = document.getElementById('container').offsetHeight;
-    if (mainApp)
-      mainApp.refresh();
   }
 
   window.addEventListener("resize", fitToWindow);

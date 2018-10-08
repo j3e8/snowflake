@@ -71,9 +71,9 @@ angular.module('app').service('SnowflakeApp', function() {
         for (var i=0; i<paintSegments.length; i++) {
           ctx.beginPath();
           ctx.strokeStyle = paintSegments[i].color;
-          ctx.lineWidth = paintSegments[i].weight * 3 + 1;
           ctx.moveTo(paintSegments[i].points[0].x, paintSegments[i].points[0].y);
           for (var j=1; j<paintSegments[i].points.length; j++) {
+            ctx.lineWidth = paintSegments[i].points[j].weight * 3 + 1;
             ctx.lineTo(paintSegments[i].points[j].x, paintSegments[i].points[j].y);
           }
           ctx.stroke();
@@ -85,9 +85,9 @@ angular.module('app').service('SnowflakeApp', function() {
         for (var i=0; i<paintSegments.length; i++) {
           ctx.beginPath();
           ctx.strokeStyle = paintSegments[i].color;
-          ctx.lineWidth = paintSegments[i].weight * 3 + 1;
           ctx.moveTo(-paintSegments[i].points[0].x, paintSegments[i].points[0].y);
           for (var j=1; j<paintSegments[i].points.length; j++) {
+            ctx.lineWidth = paintSegments[i].points[j].weight * 3 + 1;
             ctx.lineTo(-paintSegments[i].points[j].x, paintSegments[i].points[j].y);
           }
           ctx.stroke();
@@ -123,7 +123,7 @@ angular.module('app').service('SnowflakeApp', function() {
     _requestAnimationFrame(updateCanvas);
 
     this.mousemove = function(pt, force) {
-      pt = {x:pt.x - width/2, y:pt.y - height/2, weight: force || 0 };
+      pt = { x:pt.x - width/2, y:pt.y - height/2, weight: force || 0 };
       mouseLocation = pt;
 
       if (isDragging && currentSegment) {

@@ -16,6 +16,7 @@
 		E012F0C1216AA90100D3D2ED /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E012F0C0216AA90100D3D2ED /* index.html */; };
 		E012F0C3216AA9C300D3D2ED /* www in Resources */ = {isa = PBXBuildFile; fileRef = E012F0C2216AA9C300D3D2ED /* www */; };
 		E012F0C6216AAA2400D3D2ED /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E012F0C5216AAA2400D3D2ED /* WebKit.framework */; };
+		E012F0C8216AB16C00D3D2ED /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = E012F0C7216AB16C00D3D2ED /* launch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E012F0C0216AA90100D3D2ED /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../../../index.html; sourceTree = "<group>"; };
 		E012F0C2216AA9C300D3D2ED /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../../www; sourceTree = "<group>"; };
 		E012F0C5216AAA2400D3D2ED /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		E012F0C7216AB16C00D3D2ED /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch.png; path = ../launch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 		E012F09E216AA68800D3D2ED = {
 			isa = PBXGroup;
 			children = (
+				E012F0C7216AB16C00D3D2ED /* launch.png */,
 				E012F0A9216AA68800D3D2ED /* snowflake */,
 				E012F0A8216AA68800D3D2ED /* Products */,
 				E012F0C4216AAA2300D3D2ED /* Frameworks */,
@@ -146,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E012F0C8216AB16C00D3D2ED /* launch.png in Resources */,
 				E012F0B7216AA68900D3D2ED /* LaunchScreen.storyboard in Resources */,
 				E012F0C1216AA90100D3D2ED /* index.html in Resources */,
 				E012F0B4216AA68900D3D2ED /* Assets.xcassets in Resources */,
